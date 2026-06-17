@@ -98,7 +98,7 @@
   top: 31cqh;
   max-width: min(72cqw, var(--title-width));
   font-size: calc(9.4cqw * var(--title-scale));
-  line-height: 0.98;
+  line-height: var(--title-line-height);
 }
 
 .cyber-review.is-wide .cover-copy h1 {
@@ -208,7 +208,7 @@
   top: 28cqh;
   max-width: min(72cqw, var(--title-width));
   font-size: calc(9.4cqw * var(--title-scale));
-  line-height: 0.98;
+  line-height: var(--title-line-height);
 }
 
 .neon-terminal.is-wide .cover-copy h1 {
@@ -297,7 +297,7 @@
   top: 27cqh;
   max-width: min(75cqw, var(--title-width));
   font-size: calc(9.4cqw * var(--title-scale));
-  line-height: 0.98;
+  line-height: var(--title-line-height);
 }
 
 .ai-radar.is-wide .cover-copy h1 {
@@ -408,7 +408,7 @@
   top: 11cqh;
   max-width: min(70cqw, var(--title-width));
   font-size: calc(9.2cqw * var(--title-scale));
-  line-height: 0.98;
+  line-height: var(--title-line-height);
 }
 
 .glass-report.is-wide .cover-copy h1 {
@@ -490,7 +490,7 @@
 .launch-card.is-tall .cover-copy h1 {
   max-width: min(76cqw, var(--title-width));
   font-size: calc(9.2cqw * var(--title-scale));
-  line-height: 0.98;
+  line-height: var(--title-line-height);
 }
 
 .launch-card.is-tall .cover-copy p {
@@ -2444,3 +2444,41 @@
 }
 
 /* Cover Pro saved template defaults: end */
+
+/*
+ * User-controlled text settings.
+ *
+ * Template files define strong visual defaults and this file is imported after
+ * globals.css, so some template-specific line-height/color rules used to win
+ * over the editor controls. Keep these overrides last so the right panel always
+ * controls the editable text elements without changing template placement.
+ */
+.cover-canvas .template .text-el-label {
+  color: var(--text-label-color);
+}
+
+.cover-canvas .template .cover-copy .text-el-title {
+  color: var(--text-title-color);
+  line-height: var(--title-line-height);
+  letter-spacing: var(--title-letter-spacing);
+  font-weight: var(--title-weight);
+}
+
+.cover-canvas .template .cover-copy .text-el-subtitle,
+.cover-canvas .template .xhs-points.text-el-subtitle,
+.cover-canvas .template .xhs-points.text-el-subtitle li {
+  color: var(--text-subtitle-color);
+  line-height: var(--subtitle-line-height);
+}
+
+.cover-canvas .template .text-el-author {
+  color: var(--text-author-color);
+}
+
+.cover-canvas .template .text-el-badge {
+  color: var(--text-badge-color);
+}
+
+.cover-canvas .template .text-el-graphic {
+  color: var(--text-graphic-color);
+}

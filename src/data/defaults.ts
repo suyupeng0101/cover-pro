@@ -36,6 +36,7 @@ export const defaultStyle: CoverStyle = {
     x: 0,
     y: 0,
   },
+  stickers: [],
   elementPositions: {
     label: { x: 0, y: 0 },
     title: { x: 0, y: 0 },
@@ -60,5 +61,6 @@ export const defaultStyle: CoverStyle = {
   showBadge: true,
   showGraphicText: true,
   showImage: true,
+  showStickers: true,
   showSafeArea: true,
 };

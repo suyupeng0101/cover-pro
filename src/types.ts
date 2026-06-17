@@ -54,6 +54,25 @@ export type ElementPosition = {
 
 export type TextColorMap = Record<TextElementKey, string>;
 
+export type StickerAsset = {
+  id: string;
+  name: string;
+  kind: 'burst' | 'arrow' | 'ring' | 'bubble' | 'spark' | 'tag';
+  label?: string;
+  color: string;
+  color2: string;
+};
+
+export type StickerInstance = {
+  id: string;
+  assetId: string;
+  x: number;
+  y: number;
+  scale: number;
+  rotate: number;
+  opacity: number;
+};
+
 export type CoverStyle = {
   platformId: string;
   templateId: TemplateId;
@@ -83,6 +102,7 @@ export type CoverStyle = {
   titleX: number;
   titleY: number;
   image: ImageState;
+  stickers: StickerInstance[];
   elementPositions: Record<TextElementKey, ElementPosition>;
   textColors: TextColorMap;
   decorationDensity: 'low' | 'medium' | 'high';
@@ -93,6 +113,7 @@ export type CoverStyle = {
   showBadge: boolean;
   showGraphicText: boolean;
   showImage: boolean;
+  showStickers: boolean;
   showSafeArea: boolean;
 };
 

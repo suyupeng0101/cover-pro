@@ -11,6 +11,8 @@ import { XhsListNote } from '../templates/XhsListNote';
 import { WechatDeepDive } from '../templates/WechatDeepDive';
 import { BoldNumber } from '../templates/BoldNumber';
 import { FashionMagazine } from '../templates/FashionMagazine';
+import { getStickerAsset } from '../data/stickers';
+import type { StickerAsset } from '../types';
 
 type CoverCanvasProps = {
   content: CoverContent;
@@ -18,10 +20,14 @@ type CoverCanvasProps = {
   platform: Platform;
   theme: Theme;
   onElementPointerDown?: (key: TextElementKey, event: React.PointerEvent<HTMLElement>) => void;
+  onStickerPointerDown?: (id: string, event: React.PointerEvent<HTMLElement>) => void;
+  onStickerRemove?: (id: string) => void;
+  onStickerDrop?: (assetId: string, x: number, y: number) => void;
+  selectedStickerId?: string | null;
 };
 
 export const CoverCanvas = forwardRef<HTMLDivElement, CoverCanvasProps>(
-  ({ content, style, platform, theme, onElementPointerDown }, ref) => {
+  ({ content, style, platform, theme, onElementPointerDown, onStickerPointerDown, onStickerRemove, onStickerDrop, selectedStickerId }, ref) => {
     const cssVars = {
       '--cover-width': `${platform.width}px`,
       '--cover-height': `${platform.height}px`,
@@ -71,6 +77,20 @@ export const CoverCanvas = forwardRef<HTMLDivElement, CoverCanvasProps>(
       <div
         ref={ref}
         className={`cover-canvas density-${style.decorationDensity}`}
+        onDragOver={(event) => {
+          if (!event.dataTransfer.types.includes('application/x-cover-pro-sticker')) return;
+          event.preventDefault();
+          event.dataTransfer.dropEffect = 'copy';
+        }}
+        onDrop={(event) => {
+          const assetId = event.dataTransfer.getData('application/x-cover-pro-sticker');
+          if (!assetId) return;
+          event.preventDefault();
+          const rect = event.currentTarget.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          onStickerDrop?.(assetId, clampPercent(x), clampPercent(y));
+        }}
         onPointerDown={(event) => {
           const key = getTextElementKeyFromTarget(event.target);
           if (key) onElementPointerDown?.(key, event);
@@ -98,6 +118,55 @@ export const CoverCanvas = forwardRef<HTMLDivElement, CoverCanvasProps>(
         {style.templateId === 'bold-number' && <BoldNumber content={content} style={style} platform={platform} />}
         {style.templateId === 'fashion-magazine' && <FashionMagazine content={content} style={style} platform={platform} />}
         </div>
+        {style.showStickers && (
+          <div className="sticker-layer" aria-label="贴图图层">
+            {style.stickers.map((sticker) => (
+              <button
+                className={`sticker-instance ${sticker.id === selectedStickerId ? 'selected' : ''}`}
+                key={sticker.id}
+                type="button"
+                data-sticker-id={sticker.id}
+                onPointerDown={(event) => onStickerPointerDown?.(sticker.id, event)}
+                style={{
+                  left: `${sticker.x}%`,
+                  top: `${sticker.y}%`,
+                  opacity: sticker.opacity,
+                  transform: `translate(-50%, -50%) rotate(${sticker.rotate}deg) scale(${sticker.scale})`,
+                  '--sticker-color': getStickerAsset(sticker.assetId).color,
+                  '--sticker-color-2': getStickerAsset(sticker.assetId).color2,
+                } as CSSProperties}
+                aria-label={`贴图 ${getStickerAsset(sticker.assetId).name}`}
+              >
+                <StickerShape asset={getStickerAsset(sticker.assetId)} />
+                {sticker.id === selectedStickerId && (
+                  <span
+                    className="sticker-remove"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="删除贴图"
+                    onPointerDown={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      onStickerRemove?.(sticker.id);
+                    }}
+                    onKeyDown={(event) => {
+                      if (event.key !== 'Enter' && event.key !== ' ') return;
+                      event.preventDefault();
+                      event.stopPropagation();
+                      onStickerRemove?.(sticker.id);
+                    }}
+                  >
+                    ×
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+        )}
         {style.showSafeArea && <SafeArea />}
       </div>
     );
@@ -132,6 +201,60 @@ function SafeArea() {
   );
 }
 
+function StickerShape({ asset }: { asset: StickerAsset }) {
+  if (asset.kind === 'arrow') {
+    return (
+      <svg viewBox="0 0 120 80" aria-hidden="true">
+        <path className="sticker-fill" d="M78 8 114 40 78 72V52H8V28h70V8Z" />
+        <path className="sticker-shadow" d="M78 8 114 40 78 72V52H8V28h70V8Z" />
+      </svg>
+    );
+  }
+
+  if (asset.kind === 'ring') {
+    return (
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <ellipse className="sticker-stroke" cx="60" cy="60" rx="44" ry="31" transform="rotate(-16 60 60)" />
+        <path className="sticker-sheen" d="M83 29 96 20M94 39l16-2M35 90l-14 9" />
+      </svg>
+    );
+  }
+
+  if (asset.kind === 'bubble') {
+    return (
+      <svg viewBox="0 0 130 92" aria-hidden="true">
+        <path className="sticker-fill" d="M14 14h102c8 0 14 6 14 14v29c0 8-6 14-14 14H66L43 88l6-17H14C6 71 0 65 0 57V28c0-8 6-14 14-14Z" />
+        <text x="65" y="51" textAnchor="middle">{asset.label}</text>
+      </svg>
+    );
+  }
+
+  if (asset.kind === 'spark') {
+    return (
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <path className="sticker-fill" d="M60 6 73 45l41 15-41 15-13 39-13-39L6 60l41-15L60 6Z" />
+        <path className="sticker-secondary" d="M94 7l5 16 15 5-15 5-5 16-5-16-15-5 15-5 5-16ZM25 73l4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12Z" />
+      </svg>
+    );
+  }
+
+  if (asset.kind === 'tag') {
+    return (
+      <svg viewBox="0 0 132 76" aria-hidden="true">
+        <path className="sticker-fill" d="M8 0h116l-13 38 13 38H8c-4 0-8-4-8-8V8c0-4 4-8 8-8Z" />
+        <text x="55" y="47" textAnchor="middle">{asset.label}</text>
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <path className="sticker-fill" d="M60 4 72 28l26-12-7 28 28 8-25 16 18 23-30-1-3 30-19-22-19 22-3-30-30 1 18-23L1 52l28-8-7-28 26 12L60 4Z" />
+      <text x="60" y="69" textAnchor="middle">{asset.label}</text>
+    </svg>
+  );
+}
+
 function getTextElementKeyFromTarget(target: EventTarget): TextElementKey | null {
   const el = target instanceof HTMLElement
     ? target.closest<HTMLElement>('[data-cover-element], .text-el-label, .text-el-title, .text-el-subtitle, .text-el-author, .text-el-badge, .text-el-graphic')
@@ -146,6 +269,10 @@ function getTextElementKeyFromTarget(target: EventTarget): TextElementKey | null
   if (el.classList.contains('text-el-badge')) return 'badge';
   if (el.classList.contains('text-el-graphic')) return 'graphic';
   return null;
+}
+
+function clampPercent(value: number) {
+  return Math.max(0, Math.min(100, value));
 }
 
 function isTextElementKey(value: string | undefined): value is TextElementKey {

@@ -22,7 +22,9 @@ import {
   Shield,
   SlidersHorizontal,
   Sparkles,
+  Sticker,
   Sun,
+  Trash2,
   Type,
 } from 'lucide-react';
 import { CoverCanvas } from './components/CoverCanvas';
@@ -30,9 +32,10 @@ import { PreviewStage } from './components/PreviewStage';
 import { platforms } from './data/platforms';
 import { themes } from './data/themes';
 import { templates } from './data/templates';
+import { getStickerAsset, stickerAssets } from './data/stickers';
 import { defaultContent, defaultStyle } from './data/defaults';
 import { coverToolFeatures } from './config/features';
-import type { CoverContent, CoverStyle, TemplateId, TextElementKey } from './types';
+import type { CoverContent, CoverStyle, StickerInstance, TemplateId, TextElementKey } from './types';
 import { createCustomTheme } from './utils/color';
 import { exportCoverAsPng } from './utils/exportImage';
 import { buildFileName } from './utils/filename';
@@ -72,6 +75,7 @@ type SectionId =
   | 'content'
   | 'asset'
   | 'template'
+  | 'stickers'
   | 'theme'
   | 'textColor'
   | 'typography'
@@ -91,6 +95,7 @@ export function App() {
     content: false,
     asset: true,
     template: false,
+    stickers: false,
     theme: false,
     textColor: false,
     typography: true,
@@ -99,6 +104,7 @@ export function App() {
     decor: true,
   });
   const [selectedTextElement, setSelectedTextElement] = useState<TextElementKey>('title');
+  const [selectedStickerId, setSelectedStickerId] = useState<string | null>(initialDraft?.style.stickers[0]?.id ?? null);
   const [hasTextOverflow, setHasTextOverflow] = useState(false);
   const [saveTip, setSaveTip] = useState<SaveTip | null>(null);
   const coverRef = useRef<HTMLDivElement>(null);
@@ -183,6 +189,27 @@ export function App() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [saveDraft]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Delete' && event.key !== 'Backspace') return;
+      const target = event.target;
+      if (
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target instanceof HTMLSelectElement ||
+        (target instanceof HTMLElement && target.isContentEditable)
+      ) {
+        return;
+      }
+      if (!selectedStickerId) return;
+      event.preventDefault();
+      removeSticker(selectedStickerId);
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [selectedStickerId, style.stickers]);
 
   useEffect(() => {
     return () => {
@@ -283,6 +310,97 @@ export function App() {
         y: 0,
       },
     });
+  };
+
+  const addSticker = (assetId: string, x = 50, y = 50) => {
+    const id = createStickerId();
+    const sticker: StickerInstance = {
+      id,
+      assetId,
+      x,
+      y,
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+    };
+    setStyle((current) => ({
+      ...current,
+      stickers: [...current.stickers, sticker],
+      showStickers: true,
+    }));
+    setSelectedStickerId(id);
+  };
+
+  const updateSticker = (id: string, patch: Partial<StickerInstance>) => {
+    setStyle((current) => ({
+      ...current,
+      stickers: current.stickers.map((sticker) => (
+        sticker.id === id
+          ? {
+              ...sticker,
+              ...patch,
+              x: patch.x === undefined ? sticker.x : clamp(patch.x, 0, 100),
+              y: patch.y === undefined ? sticker.y : clamp(patch.y, 0, 100),
+              scale: patch.scale === undefined ? sticker.scale : clamp(patch.scale, 0.35, 2.4),
+              rotate: patch.rotate === undefined ? sticker.rotate : clamp(patch.rotate, -180, 180),
+              opacity: patch.opacity === undefined ? sticker.opacity : clamp(patch.opacity, 0.15, 1),
+            }
+          : sticker
+      )),
+    }));
+  };
+
+  const removeSticker = (id: string) => {
+    setStyle((current) => ({
+      ...current,
+      stickers: current.stickers.filter((sticker) => sticker.id !== id),
+    }));
+    setSelectedStickerId((current) => {
+      if (current !== id) return current;
+      const nextSticker = style.stickers.find((sticker) => sticker.id !== id);
+      return nextSticker?.id ?? null;
+    });
+  };
+
+  const clearStickers = () => {
+    patchStyle({ stickers: [] });
+    setSelectedStickerId(null);
+  };
+
+  const onStickerPointerDown = (id: string, event: ReactPointerEvent<HTMLElement>) => {
+    const canvas = coverRef.current;
+    if (!canvas) return;
+    event.preventDefault();
+    event.stopPropagation();
+    setSelectedStickerId(id);
+
+    const sticker = style.stickers.find((item) => item.id === id);
+    if (!sticker) return;
+
+    const canvasRect = canvas.getBoundingClientRect();
+    const startClientX = event.clientX;
+    const startClientY = event.clientY;
+    const startX = sticker.x;
+    const startY = sticker.y;
+
+    const move = (moveEvent: PointerEvent) => {
+      const dx = ((moveEvent.clientX - startClientX) / canvasRect.width) * 100;
+      const dy = ((moveEvent.clientY - startClientY) / canvasRect.height) * 100;
+      updateSticker(id, {
+        x: startX + dx,
+        y: startY + dy,
+      });
+    };
+
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+      window.removeEventListener('pointercancel', up);
+    };
+
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    window.addEventListener('pointercancel', up);
   };
 
   const getCurrentElementPositionBounds = (key: TextElementKey, origin = style.elementPositions[key]): PositionBounds => {
@@ -389,6 +507,23 @@ export function App() {
     );
   };
 
+  const onFeedback = () => {
+    const issueUrl = buildFeedbackUrl({
+      title: `Feedback: ${platform.shortName} / ${templates.find((item) => item.id === style.templateId)?.name ?? style.templateId}`,
+      body: [
+        'Please describe the suggestion, bug, or workflow issue here.',
+        '',
+        '---',
+        `Platform: ${platform.id} (${platform.width}x${platform.height})`,
+        `Template: ${style.templateId}`,
+        `Theme: ${style.themeId}`,
+        `Font: ${style.fontFamily}`,
+        `Browser: ${navigator.userAgent}`,
+      ].join('\n'),
+    });
+    window.open(issueUrl, '_blank', 'noopener,noreferrer');
+  };
+
   const saveCurrentLayoutAsTemplateDefault = async () => {
     try {
       const positions = getEffectiveElementPositions(coverRef.current, style.elementPositions);
@@ -486,6 +621,10 @@ export function App() {
             <Github size={16} />
             GitHub
           </a>
+          <button className="ghost-button feedback-button" type="button" onClick={onFeedback}>
+            <MessageSquareIcon />
+            反馈
+          </button>
           <button
             className="ghost-button"
             type="button"
@@ -609,6 +748,10 @@ export function App() {
             platform={platform}
             theme={theme}
             onElementPointerDown={onCanvasElementPointerDown}
+            onStickerPointerDown={onStickerPointerDown}
+            onStickerRemove={removeSticker}
+            onStickerDrop={addSticker}
+            selectedStickerId={selectedStickerId}
           />
         </PreviewStage>
 
@@ -637,6 +780,61 @@ export function App() {
                 </button>
               ))}
             </div>
+          </CollapsibleSection>
+
+          <CollapsibleSection
+            title="贴图"
+            summary={style.stickers.length > 0 ? `${style.stickers.length} 个贴图` : '拖到画布或点击添加'}
+            icon={<Sticker size={16} />}
+            collapsed={collapsedSections.stickers}
+            active={style.stickers.length > 0}
+            onToggle={() => toggleSection('stickers')}
+          >
+            <div className="sticker-palette">
+              {stickerAssets.map((asset) => (
+                <button
+                  className="sticker-palette-item"
+                  key={asset.id}
+                  type="button"
+                  draggable
+                  onClick={() => addSticker(asset.id)}
+                  onDragStart={(event) => {
+                    event.dataTransfer.setData('application/x-cover-pro-sticker', asset.id);
+                    event.dataTransfer.effectAllowed = 'copy';
+                  }}
+                  title={`添加${asset.name}`}
+                  aria-label={`添加${asset.name}贴图`}
+                >
+                  <StickerPreview assetId={asset.id} />
+                  <span>{asset.name}</span>
+                </button>
+              ))}
+            </div>
+
+            {style.stickers.length > 0 && (
+              <>
+                <SelectRow
+                  label="当前"
+                  value={selectedStickerId ?? style.stickers[0].id}
+                  onChange={(value) => setSelectedStickerId(value)}
+                  options={style.stickers.map((sticker, index) => ({
+                    value: sticker.id,
+                    label: `${index + 1}. ${getStickerAsset(sticker.assetId).name}`,
+                  }))}
+                />
+                {selectedStickerId && style.stickers.some((sticker) => sticker.id === selectedStickerId) && (
+                  <StickerControls
+                    sticker={style.stickers.find((sticker) => sticker.id === selectedStickerId)!}
+                    onChange={(patch) => updateSticker(selectedStickerId, patch)}
+                    onRemove={() => removeSticker(selectedStickerId)}
+                  />
+                )}
+                <button className="ghost-button full-width" type="button" onClick={clearStickers}>
+                  <Trash2 size={15} />
+                  清空贴图
+                </button>
+              </>
+            )}
           </CollapsibleSection>
 
           <CollapsibleSection
@@ -839,6 +1037,7 @@ export function App() {
               style.showBadge !== defaultStyle.showBadge ||
               style.showGraphicText !== defaultStyle.showGraphicText ||
               style.showImage !== defaultStyle.showImage ||
+              style.showStickers !== defaultStyle.showStickers ||
               style.showSafeArea !== defaultStyle.showSafeArea
             }
             onToggle={() => toggleSection('visibility')}
@@ -849,6 +1048,7 @@ export function App() {
             <Toggle label="徽章" checked={style.showBadge} onChange={(showBadge) => patchStyle({ showBadge })} />
             <Toggle label="图形文字" checked={style.showGraphicText} onChange={(showGraphicText) => patchStyle({ showGraphicText })} />
             <Toggle label="图片" checked={style.showImage} onChange={(showImage) => patchStyle({ showImage })} icon={<ImageIcon size={15} />} />
+            <Toggle label="贴图" checked={style.showStickers} onChange={(showStickers) => patchStyle({ showStickers })} icon={<Sticker size={15} />} />
             <Toggle label="安全区" checked={style.showSafeArea} onChange={(showSafeArea) => patchStyle({ showSafeArea })} icon={<Shield size={15} />} />
           </CollapsibleSection>
 
@@ -948,6 +1148,78 @@ function TemplatePreview({ id }: { id: TemplateId }) {
       <i className="tp-shape" />
       <i className="tp-extra" />
     </span>
+  );
+}
+
+function StickerPreview({ assetId }: { assetId: string }) {
+  const asset = getStickerAsset(assetId);
+  return (
+    <span
+      className={`sticker-preview sticker-preview-${asset.kind}`}
+      style={{
+        '--sticker-color': asset.color,
+        '--sticker-color-2': asset.color2,
+      } as CSSProperties}
+      aria-hidden="true"
+    >
+      {asset.kind === 'arrow' && (
+        <svg viewBox="0 0 120 80">
+          <path className="sticker-fill" d="M78 8 114 40 78 72V52H8V28h70V8Z" />
+        </svg>
+      )}
+      {asset.kind === 'ring' && (
+        <svg viewBox="0 0 120 120">
+          <ellipse className="sticker-stroke" cx="60" cy="60" rx="44" ry="31" transform="rotate(-16 60 60)" />
+          <path className="sticker-sheen" d="M83 29 96 20M94 39l16-2M35 90l-14 9" />
+        </svg>
+      )}
+      {asset.kind === 'bubble' && (
+        <svg viewBox="0 0 130 92">
+          <path className="sticker-fill" d="M14 14h102c8 0 14 6 14 14v29c0 8-6 14-14 14H66L43 88l6-17H14C6 71 0 65 0 57V28c0-8 6-14 14-14Z" />
+          <text x="65" y="51" textAnchor="middle">{asset.label}</text>
+        </svg>
+      )}
+      {asset.kind === 'spark' && (
+        <svg viewBox="0 0 120 120">
+          <path className="sticker-fill" d="M60 6 73 45l41 15-41 15-13 39-13-39L6 60l41-15L60 6Z" />
+          <path className="sticker-secondary" d="M94 7l5 16 15 5-15 5-5 16-5-16-15-5 15-5 5-16Z" />
+        </svg>
+      )}
+      {asset.kind === 'tag' && (
+        <svg viewBox="0 0 132 76">
+          <path className="sticker-fill" d="M8 0h116l-13 38 13 38H8c-4 0-8-4-8-8V8c0-4 4-8 8-8Z" />
+          <text x="55" y="47" textAnchor="middle">{asset.label}</text>
+        </svg>
+      )}
+      {asset.kind === 'burst' && (
+        <svg viewBox="0 0 120 120">
+          <path className="sticker-fill" d="M60 4 72 28l26-12-7 28 28 8-25 16 18 23-30-1-3 30-19-22-19 22-3-30-30 1 18-23L1 52l28-8-7-28 26 12L60 4Z" />
+          <text x="60" y="69" textAnchor="middle">{asset.label}</text>
+        </svg>
+      )}
+    </span>
+  );
+}
+
+type StickerControlsProps = {
+  sticker: StickerInstance;
+  onChange: (patch: Partial<StickerInstance>) => void;
+  onRemove: () => void;
+};
+
+function StickerControls({ sticker, onChange, onRemove }: StickerControlsProps) {
+  return (
+    <ControlGroup title="当前贴图">
+      <Slider label="水平" min={0} max={100} step={1} value={sticker.x} onChange={(x) => onChange({ x })} />
+      <Slider label="垂直" min={0} max={100} step={1} value={sticker.y} onChange={(y) => onChange({ y })} />
+      <Slider label="大小" min={0.35} max={2.4} step={0.01} value={sticker.scale} onChange={(scale) => onChange({ scale })} />
+      <Slider label="旋转" min={-180} max={180} step={1} value={sticker.rotate} onChange={(rotate) => onChange({ rotate })} />
+      <Slider label="透明" min={0.15} max={1} step={0.01} value={sticker.opacity} onChange={(opacity) => onChange({ opacity })} />
+      <button className="ghost-button full-width" type="button" onClick={onRemove}>
+        <Trash2 size={15} />
+        删除当前贴图
+      </button>
+    </ControlGroup>
   );
 }
 
@@ -1055,6 +1327,14 @@ function Toggle({ label, checked, icon, onChange }: ToggleProps) {
   );
 }
 
+function MessageSquareIcon() {
+  return (
+    <svg className="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 5.5h14v10H9.4L5 19.2V5.5Z" />
+    </svg>
+  );
+}
+
 function getVisibilitySummary(style: CoverStyle) {
   const visible = [
     style.showLabel && '标签',
@@ -1063,6 +1343,7 @@ function getVisibilitySummary(style: CoverStyle) {
     style.showBadge && '徽章',
     style.showGraphicText && '图形文字',
     style.showImage && '图片',
+    style.showStickers && '贴图',
     style.showSafeArea && '安全区',
   ].filter(Boolean);
   return visible.length > 0 ? visible.join(' / ') : '全部隐藏';
@@ -1132,6 +1413,8 @@ function loadDraft(): DraftState | null {
           ...defaultStyle.image,
           ...(parsedStyle.image || {}),
         },
+        stickers: Array.isArray(parsedStyle.stickers) ? parsedStyle.stickers : defaultStyle.stickers,
+        showStickers: parsedStyle.showStickers ?? defaultStyle.showStickers,
         elementPositions: mergeElementPositions(parsedStyle.elementPositions),
         textColors: {
           ...defaultStyle.textColors,
@@ -1241,4 +1524,18 @@ function clampElementPosition(position: { x: number; y: number }, bounds: Positi
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
+}
+
+function buildFeedbackUrl({ title, body }: { title: string; body: string }) {
+  const url = new URL(coverToolFeatures.feedbackIssueUrl);
+  url.searchParams.set('title', title);
+  url.searchParams.set('body', body);
+  return url.toString();
+}
+
+function createStickerId() {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return crypto.randomUUID();
+  }
+  return `sticker-${Date.now()}-${Math.round(Math.random() * 10000)}`;
 }

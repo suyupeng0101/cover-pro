@@ -211,6 +211,15 @@ button {
   border-color: rgba(0, 229, 255, 0.45);
 }
 
+.button-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
 .primary-button {
   border-color: rgba(0, 229, 255, 0.55);
   background: linear-gradient(135deg, #00e5ff, #7c5cff);
@@ -670,6 +679,128 @@ button {
   border: 1px solid rgba(0, 229, 255, 0.44);
 }
 
+.sticker-layer {
+  position: absolute;
+  z-index: 16;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sticker-instance {
+  position: absolute;
+  width: 16cqw;
+  height: 16cqw;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  pointer-events: auto;
+  transform-origin: center;
+  touch-action: none;
+  will-change: transform;
+}
+
+.sticker-instance:active {
+  cursor: grabbing;
+}
+
+.sticker-instance.selected::after {
+  content: "";
+  position: absolute;
+  inset: -0.8cqw;
+  border: 0.22cqw dashed rgba(0, 229, 255, 0.86);
+  border-radius: 1.4cqw;
+  pointer-events: none;
+}
+
+.sticker-remove {
+  position: absolute;
+  top: -2.1cqw;
+  right: -2.1cqw;
+  z-index: 3;
+  width: 4cqw;
+  height: 4cqw;
+  display: grid;
+  place-items: center;
+  border: 0.22cqw solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  color: #ffffff;
+  background: #ef4444;
+  box-shadow: 0 0.45cqw 1.2cqw rgba(0, 0, 0, 0.28);
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 3cqw;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+.sticker-remove:hover {
+  background: #dc2626;
+}
+
+[data-exporting="true"] .sticker-instance.selected::after,
+[data-exporting="true"] .sticker-remove {
+  display: none;
+}
+
+.sticker-instance svg,
+.sticker-preview svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0.42cqw 0.52cqw 0 rgba(0, 0, 0, 0.34));
+}
+
+.sticker-fill {
+  fill: var(--sticker-color);
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.sticker-secondary {
+  fill: var(--sticker-color-2);
+  stroke: rgba(17, 24, 39, 0.48);
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.sticker-stroke {
+  fill: none;
+  stroke: var(--sticker-color);
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+.sticker-sheen {
+  fill: none;
+  stroke: var(--sticker-color-2);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.sticker-shadow {
+  fill: none;
+  stroke: rgba(17, 24, 39, 0.88);
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transform: translate(4px, 5px);
+}
+
+.sticker-instance text,
+.sticker-preview text {
+  fill: #111827;
+  font-family: "Arial Black", Impact, "Microsoft YaHei", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.76);
+  stroke-width: 4px;
+}
+
 .template-list {
   display: grid;
   gap: 9px;
@@ -911,6 +1042,55 @@ button {
   height: 36px;
   border-radius: 0;
   background: #d8c7ad;
+}
+
+.sticker-palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sticker-palette-item {
+  min-width: 0;
+  height: 78px;
+  display: grid;
+  grid-template-rows: 44px 1fr;
+  place-items: center;
+  gap: 4px;
+  padding: 8px 6px;
+  border: 1px solid var(--ui-border);
+  border-radius: 8px;
+  color: var(--ui-heading);
+  background: var(--ui-card);
+  font-size: 11px;
+}
+
+.sticker-palette-item:hover {
+  border-color: rgba(0, 229, 255, 0.52);
+  background: rgba(0, 229, 255, 0.07);
+}
+
+.sticker-palette-item span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sticker-preview {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.sticker-preview-arrow {
+  width: 54px;
+}
+
+.sticker-preview-tag,
+.sticker-preview-bubble {
+  width: 58px;
 }
 
 .theme-grid {

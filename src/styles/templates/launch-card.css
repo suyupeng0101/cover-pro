@@ -1,0 +1,129 @@
+/*
+ * Launch Card template
+ */
+
+.launch-card {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 86%), transparent 48%),
+    var(--theme-bg, #0F172A);
+}
+
+.launch-card::before {
+  content: "";
+  position: absolute;
+  inset: 4cqw;
+  border-radius: 2.2cqw;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 76%), rgba(255, 255, 255, 0.05));
+  filter: blur(0.1px);
+}
+
+.launch-card-panel {
+  position: absolute;
+  inset: 6cqw;
+  border-radius: 1.4cqw;
+  background: color-mix(in srgb, var(--theme-bg, #0F172A), #fff 8%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+
+.launch-topline,
+.launch-footer {
+  position: absolute;
+  left: 4cqw;
+  right: 4cqw;
+  z-index: var(--z-ui);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--theme-muted, #94A3B8);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.15cqw;
+  letter-spacing: 0.06em;
+}
+
+.launch-topline {
+  top: 3.5cqw;
+}
+
+.launch-footer {
+  bottom: 3.5cqw;
+}
+
+.launch-topline span,
+.launch-footer span {
+  color: var(--theme-accent, #7C3AED);
+}
+
+.launch-visual {
+  position: absolute;
+  right: 5cqw;
+  top: 24cqh;
+  width: 24cqw;
+  height: 24cqw;
+  z-index: var(--z-visual);
+}
+
+/* Wide (default) layout */
+.launch-card .cover-copy {
+  left: 4cqw;
+  top: 22cqh;
+  max-width: 58cqw;
+}
+
+.launch-card .cover-copy h1 {
+  max-width: min(56cqw, var(--title-width));
+}
+
+.launch-card .cover-copy p {
+  max-width: min(43cqw, var(--subtitle-width));
+}
+
+.launch-badge {
+  position: absolute;
+  z-index: var(--z-overlay);
+  right: 8cqw;
+  bottom: 8cqw;
+  max-width: 34cqw;
+  padding: 1cqw 1.4cqw;
+  border-radius: 999px;
+  background: var(--theme-accent, #7C3AED);
+  color: #02040a;
+  font-size: 1.25cqw;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+/* Tall variant */
+.launch-card.is-tall .launch-card-panel {
+  inset: 7cqw;
+}
+
+.launch-card.is-tall .cover-copy {
+  top: 13cqh;
+}
+
+.launch-card.is-tall .cover-copy h1 {
+  max-width: min(78cqw, var(--title-width));
+}
+
+.launch-card.is-tall .launch-visual {
+  right: 6cqw;
+  top: auto;
+  bottom: 17cqh;
+  width: 44cqw;
+  height: 44cqw;
+}
+
+.launch-card.is-tall .launch-topline,
+.launch-card.is-tall .launch-footer {
+  font-size: 2cqw;
+}
+
+.launch-card.is-tall .launch-badge {
+  left: 11cqw;
+  right: auto;
+  bottom: 11cqh;
+  max-width: 58cqw;
+  font-size: 2.05cqw;
+  padding: 1.4cqw 2.2cqw;
+}

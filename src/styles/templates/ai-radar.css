@@ -1,0 +1,152 @@
+/*
+ * AI Radar (AI 雷达) template
+ */
+
+.ai-radar {
+  background:
+    radial-gradient(circle at 72% 38%, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 72%), transparent 32%),
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-bg, #0F172A), #000 8%), #030712);
+}
+
+.ai-radar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 90%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 90%) 1px, transparent 1px);
+  background-size: 4cqw 4cqw;
+}
+
+.radar-map {
+  position: absolute;
+  right: -3cqw;
+  top: 13cqh;
+  width: 48cqw;
+  height: 48cqw;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 45%);
+  box-shadow:
+    inset 0 0 0 8cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 94%),
+    inset 0 0 0 17cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 96%),
+    0 0 7cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 78%);
+}
+
+.radar-sweep {
+  position: absolute;
+  inset: 50% 50% 0 0;
+  transform-origin: bottom right;
+  transform: rotate(34deg);
+  background: linear-gradient(45deg, transparent, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 52%));
+  clip-path: polygon(100% 100%, 0 0, 100% 0);
+}
+
+.ping {
+  position: absolute;
+  width: 1.6cqw;
+  height: 1.6cqw;
+  border-radius: 50%;
+  background: var(--theme-accent, #7C3AED);
+  box-shadow: 0 0 2.4cqw var(--theme-accent, #7C3AED);
+}
+
+.ping.p1 { left: 62%; top: 28%; }
+.ping.p2 { left: 34%; top: 56%; }
+.ping.p3 { left: 70%; top: 68%; }
+
+.radar-readout,
+.radar-rank,
+.ai-radar footer {
+  position: absolute;
+  z-index: var(--z-content, 6);
+}
+
+.radar-readout {
+  top: 7cqw;
+  left: 7cqw;
+  max-width: 30cqw;
+  display: grid;
+  gap: 0.6cqw;
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+}
+
+.radar-readout span,
+.radar-readout small {
+  color: var(--theme-muted, #94A3B8);
+  font-size: 1.15cqw;
+}
+
+.radar-readout strong {
+  color: var(--theme-accent, #7C3AED);
+  font-size: 1.8cqw;
+}
+
+.radar-rank {
+  right: 7cqw;
+  bottom: 7cqw;
+  display: flex;
+  align-items: center;
+  gap: 1.4cqw;
+  padding: 1cqw 1.3cqw;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 52%);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.radar-rank span {
+  max-width: 18cqw;
+  color: var(--theme-accent, #7C3AED);
+  font-size: 3cqw;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+  line-height: 1;
+}
+
+.radar-rank strong {
+  font-size: 1.5cqw;
+}
+
+/* Wide (default) layout */
+.ai-radar .cover-copy {
+  left: 7cqw;
+  top: 23cqh;
+  max-width: 56cqw;
+}
+
+.ai-radar .cover-copy h1 {
+  max-width: min(54cqw, var(--title-width));
+}
+
+.ai-radar .cover-copy p {
+  max-width: min(44cqw, var(--subtitle-width));
+}
+
+.ai-radar footer {
+  left: 7cqw;
+  bottom: 7cqw;
+  font-size: 1.45cqw;
+}
+
+/* Tall variant */
+.ai-radar.is-tall .cover-copy {
+  top: 12cqh;
+}
+
+.ai-radar.is-tall .radar-map {
+  right: -22cqw;
+  top: auto;
+  bottom: 3cqh;
+  width: 78cqw;
+  height: 78cqw;
+}
+
+.ai-radar.is-tall .radar-rank {
+  left: auto;
+  right: 8cqw;
+  bottom: 16cqh;
+  max-width: 26cqw;
+}
+
+.ai-radar.is-tall footer {
+  bottom: 5cqh;
+  font-size: 2.2cqw;
+}

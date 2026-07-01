@@ -1,0 +1,152 @@
+/*
+ * XHS Review Card (小红书测评卡) template
+ */
+
+.xhs-review-card {
+  background:
+    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--theme-accent, #FF6B6B), white 18%), transparent 18%),
+    radial-gradient(circle at 86% 16%, color-mix(in srgb, var(--theme-accent-2, #FFD93D), white 18%), transparent 20%),
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-bg, #FFF5F5), #fff 12%), var(--theme-bg, #FFF5F5));
+}
+
+.xhs-paper {
+  position: absolute;
+  inset: 5cqw;
+  border-radius: 2.4cqw;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04)),
+    color-mix(in srgb, var(--theme-bg, #FFF5F5), #fff 8%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2.4cqw 7cqw rgba(0, 0, 0, 0.22);
+}
+
+.xhs-shot {
+  position: absolute;
+  right: 8cqw;
+  bottom: 12cqw;
+  width: 27cqw;
+  height: 27cqw;
+  padding: 2cqw;
+  border-radius: 2.4cqw;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transform: rotate(4deg);
+}
+
+.xhs-sticker {
+  position: absolute;
+  top: 7cqw;
+  right: 7cqw;
+  z-index: var(--z-overlay);
+  max-width: 36cqw;
+  padding: 1.2cqw 1.8cqw;
+  border-radius: 999px;
+  color: #02040a;
+  background: var(--theme-accent, #FF6B6B);
+  font-size: 1.45cqw;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  transform: translate(
+    calc(var(--base-badge-x, 0cqw) + var(--pos-badge-x, 0cqw)),
+    calc(var(--base-badge-y, 0cqh) + var(--pos-badge-y, 0cqh))
+  ) rotate(5deg);
+}
+
+.xhs-review-card footer {
+  position: absolute;
+  left: 8cqw;
+  bottom: 6cqw;
+  z-index: var(--z-overlay);
+  color: var(--theme-muted, #94A3B8);
+  font-size: 1.45cqw;
+}
+
+/* Wide (default) layout */
+.xhs-review-card .cover-copy {
+  left: 8cqw;
+  top: 14cqh;
+  max-width: 70cqw;
+}
+
+.xhs-review-card .cover-copy h1 {
+  max-width: min(68cqw, var(--title-width));
+  color: var(--theme-fg, #1A1A2E);
+  text-shadow: 0 0.35cqw 0 color-mix(in srgb, var(--theme-accent, #FF6B6B), transparent 70%);
+}
+
+.xhs-review-card .cover-copy p {
+  max-width: min(56cqw, var(--subtitle-width));
+}
+
+/* Tall variant */
+.xhs-review-card.is-tall .cover-copy {
+  top: 12cqh;
+}
+
+.xhs-review-card.is-tall .xhs-shot {
+  right: 7cqw;
+  bottom: 12cqh;
+  width: 42cqw;
+  height: 42cqw;
+}
+
+.xhs-review-card.is-tall .xhs-sticker {
+  font-size: 2.15cqw;
+}
+
+.xhs-review-card.is-tall footer {
+  bottom: 5cqh;
+  font-size: 2.2cqw;
+}
+
+/* Wide variant overrides from template-layouts */
+.xhs-review-card.is-wide .cover-copy {
+  left: 8cqw;
+  top: 11.5cqh;
+  max-width: 63cqw;
+}
+
+.xhs-review-card.is-wide .xhs-sticker {
+  right: 6.4cqw;
+  top: 6.2cqw;
+  max-width: 30cqw;
+}
+
+.xhs-review-card.is-wide .xhs-shot {
+  right: 7cqw;
+  bottom: 8.2cqw;
+  width: 34cqw;
+  height: 34cqw;
+}
+
+.xhs-review-card.is-wide footer {
+  left: 8cqw;
+  bottom: 5.8cqw;
+  max-width: 46cqw;
+}
+
+.xhs-review-card.is-tall .cover-copy {
+  left: 7cqw;
+  top: 9.4cqh;
+  max-width: 86cqw;
+}
+
+.xhs-review-card.is-tall .xhs-sticker {
+  right: 7cqw;
+  top: 6.5cqw;
+  max-width: 43cqw;
+}
+
+.xhs-review-card.is-tall .xhs-shot {
+  right: 8cqw;
+  bottom: 10.5cqh;
+  width: 58cqw;
+  height: 46cqw;
+}
+
+.xhs-review-card.is-tall footer {
+  left: 7cqw;
+  bottom: 5cqh;
+  max-width: 52cqw;
+}

@@ -1,0 +1,213 @@
+/*
+ * Neon Terminal (终端信息) template
+ */
+
+.neon-terminal {
+  background:
+    radial-gradient(circle at 20% 22%, color-mix(in srgb, var(--theme-accent, #10B981), transparent 78%), transparent 28%),
+    linear-gradient(160deg, #020604, color-mix(in srgb, var(--theme-bg, #0F172A), #000 8%));
+}
+
+.terminal-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--theme-accent, #10B981), transparent 88%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent, #10B981), transparent 88%) 1px, transparent 1px);
+  background-size: 5cqw 5cqw;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.terminal-window {
+  position: absolute;
+  right: 6cqw;
+  top: 8cqw;
+  width: 35cqw;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #10B981), transparent 55%);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4cqw rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+  height: 3.4cqw;
+  display: flex;
+  align-items: center;
+  gap: 0.7cqw;
+  padding: 0 1.4cqw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-header span {
+  width: 1cqw;
+  height: 1cqw;
+  border-radius: 50%;
+  background: var(--theme-accent, #10B981);
+}
+
+.terminal-header code {
+  margin-left: 1cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-size: 1.15cqw;
+}
+
+.terminal-window pre {
+  margin: 0;
+  padding: 2cqw;
+  white-space: pre-wrap;
+  color: color-mix(in srgb, var(--theme-accent, #10B981), white 20%);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.35cqw;
+  line-height: 1.65;
+}
+
+.terminal-art {
+  right: 9cqw;
+  bottom: 13cqw;
+  width: 24cqw;
+  height: 24cqw;
+}
+
+.command-line {
+  left: 7cqw;
+  right: 7cqw;
+  bottom: 7cqw;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 2cqw;
+  align-items: end;
+  max-width: 86cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.35cqw;
+}
+
+.command-line span {
+  color: var(--theme-accent, #10B981);
+  font-weight: 900;
+}
+
+.command-line strong {
+  max-width: 48cqw;
+  color: var(--theme-accent, #10B981);
+  font-size: 1.25cqw;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.command-line em {
+  max-width: 30cqw;
+  margin-left: 0;
+  color: color-mix(in srgb, var(--theme-fg, #F1F5F9), var(--theme-muted, #94A3B8) 54%);
+  font-size: 1.25cqw;
+  font-style: normal;
+  line-height: 1.2;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* Wide (default) layout */
+.neon-terminal .cover-copy {
+  left: 7cqw;
+  top: 24cqh;
+  max-width: 55cqw;
+}
+
+.neon-terminal .cover-copy h1 {
+  max-width: min(52cqw, var(--title-width));
+  color: #f4fff8;
+}
+
+.neon-terminal .cover-copy p {
+  max-width: min(43cqw, var(--subtitle-width));
+}
+
+/* Tall variant */
+.neon-terminal.is-tall .cover-copy {
+  top: 12cqh;
+  left: 7cqw;
+}
+
+.neon-terminal.is-tall .terminal-window {
+  left: 7cqw;
+  right: 7cqw;
+  top: auto;
+  bottom: 5.5cqh;
+  width: auto;
+  max-height: 18cqh;
+  overflow: hidden;
+}
+
+.neon-terminal.is-tall .terminal-art {
+  right: 3cqw;
+  bottom: 25cqh;
+  width: 46cqw;
+  height: 46cqw;
+}
+
+.neon-terminal.is-tall .terminal-header {
+  height: 6cqw;
+  gap: 1cqw;
+  padding: 0 2cqw;
+}
+
+.neon-terminal.is-tall .terminal-header span {
+  width: 1.3cqw;
+  height: 1.3cqw;
+}
+
+.neon-terminal.is-tall .terminal-header code {
+  font-size: 1.75cqw;
+}
+
+.neon-terminal.is-tall .terminal-window pre {
+  padding: 3cqw;
+  font-size: 2.15cqw;
+  line-height: 1.7;
+}
+
+.neon-terminal.is-tall .command-line {
+  left: 7cqw;
+  right: 7cqw;
+  bottom: 5cqh;
+  max-width: 86cqw;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 34cqw);
+}
+
+.neon-terminal.is-tall .command-line strong,
+.neon-terminal.is-tall .command-line em {
+  font-size: 2cqw;
+}
+
+/* Wide variant overrides from template-layouts */
+.neon-terminal.is-wide .terminal-art {
+  left: 8cqw;
+  right: auto;
+  top: 10cqh;
+  bottom: auto;
+  width: 22cqw;
+  height: 24cqw;
+}
+
+.neon-terminal.is-wide .label-chip {
+  position: absolute;
+  right: 9cqw;
+  top: 9cqh;
+  margin: 0;
+}
+
+.neon-terminal.is-tall .label-chip {
+  position: absolute;
+  right: 14cqw;
+  top: 9.5cqh;
+  margin: 0;
+  max-width: 25cqw;
+  font-size: 1.85cqw;
+}
+
+.density-low .terminal-window {
+  display: none;
+}
+
+.density-high .terminal-bg {
+  opacity: 1;
+}

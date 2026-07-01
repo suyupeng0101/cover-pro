@@ -1,0 +1,1352 @@
+/* Cover Pro saved template defaults: start */
+.template-platform-generated-image-vertical-34 .cyber-review {
+  --base-label-x: -54.95cqw;
+  --base-label-y: -11.88cqh;
+  --base-title-x: -5.17cqw;
+  --base-title-y: -24cqh;
+  --base-subtitle-x: -4.53cqw;
+  --base-subtitle-y: -13.7cqh;
+  --base-author-x: 4.04cqw;
+  --base-author-y: -0.36cqh;
+  --base-badge-x: -56.08cqw;
+  --base-badge-y: -5.94cqh;
+  --base-graphic-x: 13.09cqw;
+  --base-graphic-y: 65.58cqh;
+}
+
+.template-platform-xhs-video-vertical .cyber-review {
+  --base-label-x: -54.95cqw;
+  --base-label-y: -12.24cqh;
+  --base-title-x: -5.82cqw;
+  --base-title-y: -26.06cqh;
+  --base-subtitle-x: -6.79cqw;
+  --base-subtitle-y: -16.73cqh;
+  --base-author-x: -8.4cqw;
+  --base-author-y: -0.24cqh;
+  --base-badge-x: -56.24cqw;
+  --base-badge-y: -5.7cqh;
+  --base-graphic-x: 13.74cqw;
+  --base-graphic-y: 58.3cqh;
+}
+
+.template-platform-xhs-video-horizontal .cyber-review {
+  --base-label-x: -61.82cqw;
+  --base-label-y: -23.64cqh;
+  --base-title-x: 5.27cqw;
+  --base-title-y: -31.88cqh;
+  --base-subtitle-x: 8.19cqw;
+  --base-subtitle-y: -26.78cqh;
+  --base-author-x: -11.36cqw;
+  --base-author-y: -1.94cqh;
+  --base-badge-x: -62.64cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 14.18cqw;
+  --base-graphic-y: 77.09cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .cyber-review {
+  --base-label-x: -54.43cqw;
+  --base-label-y: -12.48cqh;
+  --base-title-x: -5.99cqw;
+  --base-title-y: -18.42cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: -7.76cqh;
+  --base-author-x: -8.75cqw;
+  --base-author-y: -0.73cqh;
+  --base-badge-x: -55.41cqw;
+  --base-badge-y: -5.58cqh;
+  --base-graphic-x: 15.39cqw;
+  --base-graphic-y: 66.66cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .cyber-review {
+  --base-label-x: -54.73cqw;
+  --base-label-y: -11.52cqh;
+  --base-title-x: -4.53cqw;
+  --base-title-y: -23.64cqh;
+  --base-subtitle-x: -4.53cqw;
+  --base-subtitle-y: -19.88cqh;
+  --base-author-x: -9.05cqw;
+  --base-author-y: -0.73cqh;
+  --base-badge-x: -56.24cqw;
+  --base-badge-y: -5.7cqh;
+  --base-graphic-x: 12.07cqw;
+  --base-graphic-y: 60.73cqh;
+}
+
+.template-platform-douyin-video-horizontal .cyber-review {
+  --base-label-x: -60.47cqw;
+  --base-label-y: -22.86cqh;
+  --base-title-x: 3.98cqw;
+  --base-title-y: -37.67cqh;
+  --base-subtitle-x: 1.11cqw;
+  --base-subtitle-y: -28.62cqh;
+  --base-author-x: -6.94cqw;
+  --base-author-y: -1.81cqh;
+  --base-badge-x: -61.57cqw;
+  --base-badge-y: 0.66cqh;
+  --base-graphic-x: 13.33cqw;
+  --base-graphic-y: 75.17cqh;
+}
+
+.template-platform-wechat-channels-vertical .cyber-review {
+  --base-label-x: -54.44cqw;
+  --base-label-y: -12.85cqh;
+  --base-title-x: -5.37cqw;
+  --base-title-y: -26.55cqh;
+  --base-subtitle-x: 2.12cqw;
+  --base-subtitle-y: -18.55cqh;
+  --base-author-x: 1.7cqw;
+  --base-author-y: 4.36cqh;
+  --base-badge-x: -57.13cqw;
+  --base-badge-y: -0.73cqh;
+  --base-graphic-x: 11.31cqw;
+  --base-graphic-y: 74.3cqh;
+}
+
+.template-platform-wechat-channels-horizontal .cyber-review {
+  --base-label-x: -60.93cqw;
+  --base-label-y: -23.52cqh;
+  --base-title-x: -0.46cqw;
+  --base-title-y: -41.94cqh;
+  --base-subtitle-x: 5.56cqw;
+  --base-subtitle-y: -27.8cqh;
+  --base-author-x: -9.35cqw;
+  --base-author-y: -2.3cqh;
+  --base-badge-x: -61.3cqw;
+  --base-badge-y: -0.66cqh;
+  --base-graphic-x: 14.91cqw;
+  --base-graphic-y: 72.37cqh;
+}
+
+.template-platform-wechat-official-cover .cyber-review {
+  --base-label-x: -60.78cqw;
+  --base-label-y: -23.5cqh;
+  --base-title-x: 0.56cqw;
+  --base-title-y: -45.43cqh;
+  --base-subtitle-x: 5.78cqw;
+  --base-subtitle-y: -28.46cqh;
+  --base-author-x: -9.11cqw;
+  --base-author-y: -2.87cqh;
+  --base-badge-x: -59.33cqw;
+  --base-badge-y: -0.78cqh;
+  --base-graphic-x: 15.99cqw;
+  --base-graphic-y: 65.54cqh;
+}
+
+.template-platform-xhs-video-vertical .neon-terminal {
+  --base-label-x: -60.12cqw;
+  --base-label-y: -19.15cqh;
+  --base-title-x: 6.79cqw;
+  --base-title-y: 8.48cqh;
+  --base-subtitle-x: 13.25cqw;
+  --base-subtitle-y: 14.91cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 12.28cqw;
+  --base-graphic-y: 63.27cqh;
+}
+
+.template-platform-generated-image-vertical-34 .neon-terminal {
+  --base-label-x: -54.31cqw;
+  --base-label-y: -13.21cqh;
+  --base-title-x: 8.24cqw;
+  --base-title-y: 6.67cqh;
+  --base-subtitle-x: 10.02cqw;
+  --base-subtitle-y: 11.88cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 11.64cqw;
+  --base-graphic-y: 62.18cqh;
+}
+
+.template-platform-xhs-video-horizontal .neon-terminal {
+  --base-label-x: -31.18cqw;
+  --base-label-y: -25.82cqh;
+  --base-title-x: 11.27cqw;
+  --base-title-y: 5.69cqh;
+  --base-subtitle-x: 20.73cqw;
+  --base-subtitle-y: 2.91cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 15.73cqw;
+  --base-graphic-y: 73.7cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .neon-terminal {
+  --base-label-x: -54.11cqw;
+  --base-label-y: -13.09cqh;
+  --base-title-x: 7.45cqw;
+  --base-title-y: 3.76cqh;
+  --base-subtitle-x: 10.37cqw;
+  --base-subtitle-y: 11.39cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 12.8cqw;
+  --base-graphic-y: 66.3cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .neon-terminal {
+  --base-label-x: -53.44cqw;
+  --base-label-y: -12.12cqh;
+  --base-title-x: 6.9cqw;
+  --base-title-y: 8.36cqh;
+  --base-subtitle-x: 12.28cqw;
+  --base-subtitle-y: 15.52cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 11.85cqw;
+  --base-graphic-y: 58.18cqh;
+}
+
+.template-platform-douyin-video-horizontal .neon-terminal {
+  --base-label-x: -30.93cqw;
+  --base-label-y: -26.32cqh;
+  --base-title-x: 14.72cqw;
+  --base-title-y: -0.83cqh;
+  --base-subtitle-x: 15.74cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 15.65cqw;
+  --base-graphic-y: 74.01cqh;
+}
+
+.template-platform-wechat-channels-vertical .neon-terminal {
+  --base-label-x: -53.88cqw;
+  --base-label-y: -12.85cqh;
+  --base-title-x: 7.21cqw;
+  --base-title-y: 4.97cqh;
+  --base-subtitle-x: 12.44cqw;
+  --base-subtitle-y: 9.45cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 14.71cqw;
+  --base-graphic-y: 62.3cqh;
+}
+
+.template-platform-wechat-channels-horizontal .neon-terminal {
+  --base-label-x: -31.2cqw;
+  --base-label-y: -25cqh;
+  --base-title-x: 15.83cqw;
+  --base-title-y: 2.14cqh;
+  --base-subtitle-x: 18.33cqw;
+  --base-subtitle-y: 1.81cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 32.69cqw;
+  --base-graphic-y: 74.51cqh;
+}
+
+.template-platform-wechat-official-cover .neon-terminal {
+  --base-label-x: -31.22cqw;
+  --base-label-y: -24.54cqh;
+  --base-title-x: 13.78cqw;
+  --base-title-y: -7.83cqh;
+  --base-subtitle-x: 22.67cqw;
+  --base-subtitle-y: -16.98cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 6.33cqw;
+  --base-badge-y: 1.04cqh;
+  --base-graphic-x: 33.9cqw;
+  --base-graphic-y: 74.93cqh;
+}
+
+.template-platform-wechat-official-cover .ai-radar {
+  --base-label-x: 5.33cqw;
+  --base-label-y: -18.28cqh;
+  --base-title-x: 15.67cqw;
+  --base-title-y: -23.5cqh;
+  --base-subtitle-x: 29cqw;
+  --base-subtitle-y: -31.59cqh;
+  --base-author-x: 6.44cqw;
+  --base-author-y: 1.31cqh;
+  --base-badge-x: 60.22cqw;
+  --base-badge-y: -5.48cqh;
+  --base-graphic-x: 40.44cqw;
+  --base-graphic-y: 34.99cqh;
+}
+
+.template-platform-wechat-channels-horizontal .ai-radar {
+  --base-label-x: 6.12cqw;
+  --base-label-y: -17.46cqh;
+  --base-title-x: 20.94cqw;
+  --base-title-y: -15.17cqh;
+  --base-subtitle-x: 23.89cqw;
+  --base-subtitle-y: -22.86cqh;
+  --base-author-x: 6.39cqw;
+  --base-author-y: 1.48cqh;
+  --base-badge-x: 61.83cqw;
+  --base-badge-y: -6.8cqh;
+  --base-graphic-x: 34.63cqw;
+  --base-graphic-y: 41.45cqh;
+}
+
+.template-platform-generated-image-vertical-34 .ai-radar {
+  --base-label-x: 5.66cqw;
+  --base-label-y: -13.69cqh;
+  --base-title-x: 2.1cqw;
+  --base-title-y: 15.03cqh;
+  --base-subtitle-x: 13.41cqw;
+  --base-subtitle-y: 18.55cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 18.59cqw;
+  --base-graphic-y: 62.67cqh;
+}
+
+.template-platform-xhs-video-vertical .ai-radar {
+  --base-label-x: 5.82cqw;
+  --base-label-y: -13.82cqh;
+  --base-title-x: -0.48cqw;
+  --base-title-y: 13.7cqh;
+  --base-subtitle-x: 19.72cqw;
+  --base-subtitle-y: 14.42cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 19.88cqw;
+  --base-graphic-y: 63.03cqh;
+}
+
+.template-platform-xhs-video-horizontal .ai-radar {
+  --base-label-x: 70.27cqw;
+  --base-label-y: -16.85cqh;
+  --base-title-x: 19.55cqw;
+  --base-title-y: -12.12cqh;
+  --base-subtitle-x: 20.64cqw;
+  --base-subtitle-y: -7.88cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 35.18cqw;
+  --base-graphic-y: 50.67cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .ai-radar {
+  --base-label-x: 69.02cqw;
+  --base-label-y: -16.12cqh;
+  --base-title-x: -1.94cqw;
+  --base-title-y: 13.45cqh;
+  --base-subtitle-x: 12.64cqw;
+  --base-subtitle-y: 18.91cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 12.31cqw;
+  --base-graphic-y: 59.39cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .ai-radar {
+  --base-label-x: 67.02cqw;
+  --base-label-y: -10.67cqh;
+  --base-title-x: -1.08cqw;
+  --base-title-y: 13.45cqh;
+  --base-subtitle-x: 12.28cqw;
+  --base-subtitle-y: 16.61cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 18.1cqw;
+  --base-graphic-y: 62.55cqh;
+}
+
+.template-platform-douyin-video-horizontal .ai-radar {
+  --base-label-x: 68.7cqw;
+  --base-label-y: -10.86cqh;
+  --base-title-x: 15.37cqw;
+  --base-title-y: -14.31cqh;
+  --base-subtitle-x: 20.09cqw;
+  --base-subtitle-y: -13.16cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 31.94cqw;
+  --base-graphic-y: 41.94cqh;
+}
+
+.template-platform-wechat-channels-vertical .ai-radar {
+  --base-label-x: 68.87cqw;
+  --base-label-y: -17.21cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 17.39cqw;
+  --base-subtitle-y: 1.45cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0.19cqw;
+  --base-badge-y: -0.33cqh;
+  --base-graphic-x: 19.94cqw;
+  --base-graphic-y: 63.39cqh;
+}
+
+.template-platform-wechat-official-cover .glass-report {
+  --base-label-x: 2.47cqw;
+  --base-label-y: -56.28cqh;
+  --base-title-x: -4.2cqw;
+  --base-title-y: -19.15cqh;
+  --base-subtitle-x: 4.07cqw;
+  --base-subtitle-y: -18.57cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 34.69cqw;
+  --base-graphic-y: 29.89cqh;
+}
+
+.template-platform-wechat-channels-horizontal .glass-report {
+  --base-label-x: 2.57cqw;
+  --base-label-y: -40.39cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 34.77cqw;
+  --base-graphic-y: 40.21cqh;
+}
+
+.template-platform-wechat-channels-vertical .glass-report {
+  --base-label-x: 1.67cqw;
+  --base-label-y: -4.06cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 35.23cqw;
+  --base-graphic-y: 53.23cqh;
+}
+
+.template-platform-douyin-video-horizontal .glass-report {
+  --base-label-x: 2.37cqw;
+  --base-label-y: -40.02cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 10.08cqw;
+  --base-subtitle-y: -1.1cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 33.23cqw;
+  --base-graphic-y: 40.57cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .glass-report {
+  --base-label-x: 1.27cqw;
+  --base-label-y: -5.25cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 4.03cqw;
+  --base-subtitle-y: 7.52cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 30.77cqw;
+  --base-graphic-y: 49.66cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .glass-report {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 35.89cqw;
+  --base-graphic-y: 54.31cqh;
+}
+
+.template-platform-xhs-video-horizontal .glass-report {
+  --base-label-x: 2.24cqw;
+  --base-label-y: -31.87cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 38.31cqw;
+  --base-graphic-y: 45.47cqh;
+}
+
+.template-platform-xhs-video-vertical .glass-report {
+  --base-label-x: 1.59cqw;
+  --base-label-y: -3.94cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 42.17cqw;
+  --base-graphic-y: 53.71cqh;
+}
+
+.template-platform-generated-image-vertical-34 .glass-report {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 32.62cqw;
+  --base-graphic-y: 43.56cqh;
+}
+
+.template-platform-generated-image-vertical-34 .launch-card {
+  --base-label-x: -1.06cqw;
+  --base-label-y: -0.6cqh;
+  --base-title-x: 8.7cqw;
+  --base-title-y: 0.24cqh;
+  --base-subtitle-x: 15.49cqw;
+  --base-subtitle-y: 8.24cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 3.4cqw;
+  --base-badge-y: 0.12cqh;
+  --base-graphic-x: 31.67cqw;
+  --base-graphic-y: 75.79cqh;
+}
+
+.template-platform-xhs-video-vertical .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 10.83cqw;
+  --base-title-y: 1.19cqh;
+  --base-subtitle-x: 15.44cqw;
+  --base-subtitle-y: 0.84cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 32.78cqw;
+  --base-graphic-y: 73.76cqh;
+}
+
+.template-platform-xhs-video-horizontal .launch-card {
+  --base-label-x: 5.01cqw;
+  --base-label-y: -2.86cqh;
+  --base-title-x: 16.47cqw;
+  --base-title-y: -2.27cqh;
+  --base-subtitle-x: 17.28cqw;
+  --base-subtitle-y: -2.03cqh;
+  --base-author-x: -0.63cqw;
+  --base-author-y: 0.36cqh;
+  --base-badge-x: 0.55cqw;
+  --base-badge-y: -0.24cqh;
+  --base-graphic-x: 30.44cqw;
+  --base-graphic-y: 75.67cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 7.66cqw;
+  --base-title-y: 2.75cqh;
+  --base-subtitle-x: 16.11cqw;
+  --base-subtitle-y: 3.22cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 14.52cqw;
+  --base-graphic-y: 71.61cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 10.19cqw;
+  --base-title-y: 5.73cqh;
+  --base-subtitle-x: 14.43cqw;
+  --base-subtitle-y: 7.76cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 19.31cqw;
+  --base-graphic-y: 75.91cqh;
+}
+
+.template-platform-douyin-video-horizontal .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 11.63cqw;
+  --base-title-y: -8.05cqh;
+  --base-subtitle-x: 14.2cqw;
+  --base-subtitle-y: -15.9cqh;
+  --base-author-x: -1.85cqw;
+  --base-author-y: 0.55cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 24.48cqw;
+  --base-graphic-y: 70.17cqh;
+}
+
+.template-platform-wechat-channels-vertical .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 12.25cqw;
+  --base-title-y: 5.73cqh;
+  --base-subtitle-x: 11.7cqw;
+  --base-subtitle-y: 8cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 20.19cqw;
+  --base-graphic-y: 68.99cqh;
+}
+
+.template-platform-wechat-channels-horizontal .launch-card {
+  --base-label-x: 2.98cqw;
+  --base-label-y: -8.95cqh;
+  --base-title-x: 14.2cqw;
+  --base-title-y: -8.22cqh;
+  --base-subtitle-x: 19.24cqw;
+  --base-subtitle-y: -14.81cqh;
+  --base-author-x: -1.23cqw;
+  --base-author-y: 0.91cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 29.73cqw;
+  --base-graphic-y: 72.18cqh;
+}
+
+.template-platform-wechat-official-cover .launch-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0.25cqw;
+  --base-title-y: -23cqh;
+  --base-subtitle-x: -29cqw;
+  --base-subtitle-y: 56cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 28.4cqw;
+  --base-graphic-y: 60.05cqh;
+}
+
+.template-platform-wechat-channels-vertical .xhs-review-card {
+  --base-label-x: 5.99cqw;
+  --base-label-y: -0.84cqh;
+  --base-title-x: 6.12cqw;
+  --base-title-y: 0.96cqh;
+  --base-subtitle-x: 16.29cqw;
+  --base-subtitle-y: 1.79cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 1.81cqw;
+  --base-badge-y: 2.39cqh;
+  --base-graphic-x: 14.9cqw;
+  --base-graphic-y: 69.35cqh;
+}
+
+.template-platform-wechat-official-cover .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 9.51cqw;
+  --base-title-y: -11.6cqh;
+  --base-subtitle-x: 17.29cqw;
+  --base-subtitle-y: -21.18cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 35.19cqw;
+  --base-graphic-y: 75.72cqh;
+}
+
+.template-platform-generated-image-vertical-34 .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 5.41cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 15.12cqw;
+  --base-subtitle-y: 0.84cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 11.62cqw;
+  --base-graphic-y: 72.21cqh;
+}
+
+.template-platform-xhs-video-vertical .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 6.68cqw;
+  --base-title-y: 0.48cqh;
+  --base-subtitle-x: 8.91cqw;
+  --base-subtitle-y: 3.94cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 20.21cqw;
+  --base-graphic-y: 61.95cqh;
+}
+
+.template-platform-xhs-video-horizontal .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 11.55cqw;
+  --base-title-y: -0.24cqh;
+  --base-subtitle-x: 16.38cqw;
+  --base-subtitle-y: -1.31cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 19.43cqw;
+  --base-graphic-y: 70.42cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 9.41cqw;
+  --base-title-y: 1.67cqh;
+  --base-subtitle-x: 11.8cqw;
+  --base-subtitle-y: 3.82cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 13.72cqw;
+  --base-graphic-y: 74cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 5.09cqw;
+  --base-title-y: 3.46cqh;
+  --base-subtitle-x: 9.12cqw;
+  --base-subtitle-y: 8.47cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 13.16cqw;
+  --base-graphic-y: 66.24cqh;
+}
+
+.template-platform-douyin-video-horizontal .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 9.36cqw;
+  --base-title-y: -4.2cqh;
+  --base-subtitle-x: 13.68cqw;
+  --base-subtitle-y: -9.69cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 22.22cqw;
+  --base-graphic-y: 71.64cqh;
+}
+
+.template-platform-wechat-channels-horizontal .xhs-review-card {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 9.57cqw;
+  --base-title-y: -6.03cqh;
+  --base-subtitle-x: 15.13cqw;
+  --base-subtitle-y: -10.6cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 23.66cqw;
+  --base-graphic-y: 72.55cqh;
+}
+
+.template-platform-wechat-official-cover .xhs-list-note {
+  --base-label-x: 3.09cqw;
+  --base-label-y: -16.54cqh;
+  --base-title-x: 6.79cqw;
+  --base-title-y: -13.64cqh;
+  --base-subtitle-x: 3.46cqw;
+  --base-subtitle-y: 17.98cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0.86cqw;
+  --base-badge-y: 11.89cqh;
+  --base-graphic-x: 42.47cqw;
+  --base-graphic-y: 21.47cqh;
+}
+
+.template-platform-wechat-channels-horizontal .xhs-list-note {
+  --base-label-x: 2.47cqw;
+  --base-label-y: -10.42cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0.1cqw;
+  --base-badge-y: 4.02cqh;
+  --base-graphic-x: 32.72cqw;
+  --base-graphic-y: 36.73cqh;
+}
+
+.template-platform-wechat-channels-vertical .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 3.34cqw;
+  --base-title-y: 14.8cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 38.43cqw;
+  --base-graphic-y: 58.96cqh;
+}
+
+.template-platform-douyin-video-horizontal .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 33.13cqw;
+  --base-graphic-y: 39.11cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 1.7cqw;
+  --base-title-y: 8.24cqh;
+  --base-subtitle-x: 0.64cqw;
+  --base-subtitle-y: -29.48cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 33.1cqw;
+  --base-graphic-y: 52.99cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 31.59cqw;
+  --base-graphic-y: 47.38cqh;
+}
+
+.template-platform-xhs-video-horizontal .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 7.08cqw;
+  --base-title-y: 3.94cqh;
+  --base-subtitle-x: 4.02cqw;
+  --base-subtitle-y: -1.19cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 37.59cqw;
+  --base-graphic-y: 43.68cqh;
+}
+
+.template-platform-xhs-video-vertical .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 35.97cqw;
+  --base-graphic-y: 48.94cqh;
+}
+
+.template-platform-generated-image-vertical-34 .xhs-list-note {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 32.62cqw;
+  --base-graphic-y: 45.95cqh;
+}
+
+.template-platform-generated-image-vertical-34 .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 36.12cqw;
+  --base-graphic-y: 52.52cqh;
+}
+
+.template-platform-xhs-video-vertical .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 3.03cqw;
+  --base-title-y: 8.59cqh;
+  --base-subtitle-x: 4.62cqw;
+  --base-subtitle-y: 14.44cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 24.19cqw;
+  --base-graphic-y: 66.48cqh;
+}
+
+.template-platform-xhs-video-horizontal .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 33.48cqw;
+  --base-graphic-y: 47.15cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 30.95cqw;
+  --base-graphic-y: 53.71cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 30.98cqw;
+  --base-graphic-y: 54.78cqh;
+}
+
+.template-platform-douyin-video-horizontal .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 28.09cqw;
+  --base-graphic-y: 38.38cqh;
+}
+
+.template-platform-wechat-channels-vertical .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 31.89cqw;
+  --base-graphic-y: 55.02cqh;
+}
+
+.template-platform-wechat-channels-horizontal .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 30.56cqw;
+  --base-graphic-y: 38.2cqh;
+}
+
+.template-platform-wechat-official-cover .wechat-deep-dive {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 34.2cqw;
+  --base-graphic-y: 29.01cqh;
+}
+
+.template-platform-wechat-official-cover .bold-number {
+  --base-label-x: 5.56cqw;
+  --base-label-y: -12.18cqh;
+  --base-title-x: 9.26cqw;
+  --base-title-y: -11.89cqh;
+  --base-subtitle-x: 20.74cqw;
+  --base-subtitle-y: -22.63cqh;
+  --base-author-x: 7.28cqw;
+  --base-author-y: 2.9cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 44.32cqw;
+  --base-graphic-y: 57.15cqh;
+}
+
+.template-platform-wechat-channels-horizontal .bold-number {
+  --base-label-x: 4.63cqw;
+  --base-label-y: -11.88cqh;
+  --base-title-x: 4.94cqw;
+  --base-title-y: -6.22cqh;
+  --base-subtitle-x: 9.26cqw;
+  --base-subtitle-y: -2.01cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 7.4cqw;
+  --base-badge-y: -4.21cqh;
+  --base-graphic-x: 44.34cqw;
+  --base-graphic-y: 78.77cqh;
+}
+
+.template-platform-wechat-channels-vertical .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 7.94cqw;
+  --base-title-y: 1.91cqh;
+  --base-subtitle-x: 11cqw;
+  --base-subtitle-y: 7.04cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: -36.62cqw;
+  --base-badge-y: 32.11cqh;
+  --base-graphic-x: 41.77cqw;
+  --base-graphic-y: 42.85cqh;
+}
+
+.template-platform-douyin-video-horizontal .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 0cqw;
+  --base-graphic-y: 0cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 0.64cqw;
+  --base-graphic-y: 56.46cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: -2.39cqw;
+  --base-graphic-y: 54.43cqh;
+}
+
+.template-platform-xhs-video-horizontal .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 31.06cqw;
+  --base-graphic-y: 54.07cqh;
+}
+
+.template-platform-xhs-video-vertical .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: -3.34cqw;
+  --base-graphic-y: 63.5cqh;
+}
+
+.template-platform-generated-image-vertical-34 .bold-number {
+  --base-label-x: 0cqw;
+  --base-label-y: 0cqh;
+  --base-title-x: 0cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 0cqw;
+  --base-subtitle-y: 0cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: -1.43cqw;
+  --base-graphic-y: 63.62cqh;
+}
+
+.template-platform-generated-image-vertical-34 .fashion-magazine {
+  --base-label-x: 6.05cqw;
+  --base-label-y: -1.07cqh;
+  --base-title-x: 5.41cqw;
+  --base-title-y: -0.12cqh;
+  --base-subtitle-x: 9.07cqw;
+  --base-subtitle-y: 1.79cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 0cqw;
+  --base-graphic-y: 0cqh;
+}
+
+.template-platform-xhs-video-vertical .fashion-magazine {
+  --base-label-x: 6.52cqw;
+  --base-label-y: -1.43cqh;
+  --base-title-x: 6.84cqw;
+  --base-title-y: -0.72cqh;
+  --base-subtitle-x: 9.39cqw;
+  --base-subtitle-y: 1.43cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 11.14cqw;
+  --base-graphic-y: 62.9cqh;
+}
+
+.template-platform-xhs-video-horizontal .fashion-magazine {
+  --base-label-x: 6.27cqw;
+  --base-label-y: -9.91cqh;
+  --base-title-x: 7.52cqw;
+  --base-title-y: -8.35cqh;
+  --base-subtitle-x: 11.82cqw;
+  --base-subtitle-y: -0.24cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 39.48cqw;
+  --base-graphic-y: 72.09cqh;
+}
+
+.template-platform-douyin-video-vertical-34 .fashion-magazine {
+  --base-label-x: 6.86cqw;
+  --base-label-y: -1.43cqh;
+  --base-title-x: 5.9cqw;
+  --base-title-y: -0.72cqh;
+  --base-subtitle-x: 9.09cqw;
+  --base-subtitle-y: 1.91cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 0.48cqw;
+  --base-graphic-y: 69.58cqh;
+}
+
+.template-platform-douyin-video-vertical-916 .fashion-magazine {
+  --base-label-x: 7cqw;
+  --base-label-y: -1.07cqh;
+  --base-title-x: 6.15cqw;
+  --base-title-y: 0cqh;
+  --base-subtitle-x: 8.7cqw;
+  --base-subtitle-y: 1.79cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 5.3cqw;
+  --base-graphic-y: 58.36cqh;
+}
+
+.template-platform-douyin-video-horizontal .fashion-magazine {
+  --base-label-x: 6.89cqw;
+  --base-label-y: -6.94cqh;
+  --base-title-x: 7.92cqw;
+  --base-title-y: -9.14cqh;
+  --base-subtitle-x: 8.74cqw;
+  --base-subtitle-y: -7.68cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 44.86cqw;
+  --base-graphic-y: 74.93cqh;
+}
+
+.template-platform-wechat-channels-vertical .fashion-magazine {
+  --base-label-x: 6.68cqw;
+  --base-label-y: -1.07cqh;
+  --base-title-x: 6.54cqw;
+  --base-title-y: -1.07cqh;
+  --base-subtitle-x: 8.49cqw;
+  --base-subtitle-y: 2.15cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 2.23cqw;
+  --base-graphic-y: 61.11cqh;
+}
+
+.template-platform-wechat-channels-horizontal .fashion-magazine {
+  --base-label-x: 6.38cqw;
+  --base-label-y: -6.03cqh;
+  --base-title-x: 9.05cqw;
+  --base-title-y: -11.51cqh;
+  --base-subtitle-x: 9.67cqw;
+  --base-subtitle-y: -6.94cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 32.3cqw;
+  --base-graphic-y: 59.39cqh;
+}
+
+.template-platform-wechat-official-cover .fashion-magazine {
+  --base-label-x: 6.79cqw;
+  --base-label-y: -7.83cqh;
+  --base-title-x: 8.77cqw;
+  --base-title-y: -14.22cqh;
+  --base-subtitle-x: 9.88cqw;
+  --base-subtitle-y: -21.76cqh;
+  --base-author-x: 0cqw;
+  --base-author-y: 0cqh;
+  --base-badge-x: 0cqw;
+  --base-badge-y: 0cqh;
+  --base-graphic-x: 37.65cqw;
+  --base-graphic-y: 64.99cqh;
+}
+
+/* Cover Pro saved template defaults: end */

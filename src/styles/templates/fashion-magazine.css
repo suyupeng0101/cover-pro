@@ -1,0 +1,164 @@
+/*
+ * Fashion Magazine (时尚杂志) template
+ */
+
+.fashion-magazine {
+  background:
+    linear-gradient(90deg, rgba(17, 24, 39, 0.045) 1px, transparent 1px),
+    #f8f4ec;
+  background-size: 8cqw 100%;
+  color: #111827;
+}
+
+.mag-rule {
+  position: absolute;
+  left: 6cqw;
+  right: 6cqw;
+  height: 1px;
+  background: #111827;
+  opacity: 0.52;
+}
+
+.mag-rule.top { top: 7cqw; }
+.mag-rule.bottom { bottom: 7cqw; }
+
+.mag-issue {
+  position: absolute;
+  top: 5cqw;
+  right: 6cqw;
+  color: #111827;
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.25cqw;
+  letter-spacing: 0.12em;
+}
+
+.mag-visual {
+  position: absolute;
+  z-index: var(--z-decoration, 2);
+  right: 7cqw;
+  top: 18cqh;
+  width: 31cqw;
+  height: 38cqh;
+  padding: 1.8cqw;
+  border: 1px solid rgba(17, 24, 39, 0.2);
+  background: #e6d6bf;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+.fashion-magazine .cover-copy {
+  left: 7cqw;
+  top: 19cqh;
+  max-width: 53cqw;
+}
+
+.fashion-magazine .label-chip {
+  padding-left: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-label-color, #111827);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.2cqw;
+}
+
+.fashion-magazine .cover-copy h1 {
+  max-width: min(53cqw, var(--title-width, 53cqw));
+  color: var(--text-title-color, #111827);
+  font-family: "Noto Serif SC", "Songti SC", STSong, serif;
+  font-weight: 900;
+}
+
+.fashion-magazine .cover-copy p {
+  max-width: min(42cqw, var(--subtitle-width, 42cqw));
+  color: var(--text-subtitle-color, #4b5563);
+}
+
+.mag-badge {
+  position: absolute;
+  z-index: var(--z-overlay, 8);
+  left: 7cqw;
+  bottom: 8cqw;
+  max-width: 44cqw;
+  color: var(--text-badge-color, #111827);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.25cqw;
+  line-height: 1.25;
+  transform: translate(
+    calc(var(--base-badge-x, 0cqw) + var(--pos-badge-x, 0cqw)),
+    calc(var(--base-badge-y, 0cqh) + var(--pos-badge-y, 0cqh))
+  );
+}
+
+.fashion-magazine footer {
+  position: absolute;
+  z-index: var(--z-overlay, 8);
+  right: 7cqw;
+  bottom: 6cqw;
+  max-width: 36cqw;
+  color: var(--text-author-color, #6b7280);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.25cqw;
+  text-align: right;
+}
+
+/* is-wide variant */
+.fashion-magazine.is-wide .mag-visual {
+  right: 7cqw;
+  top: 18cqh;
+  width: 31cqw;
+  height: 38cqh;
+}
+
+.fashion-magazine.is-wide .cover-copy {
+  left: 7cqw;
+  top: 19cqh;
+  max-width: 53cqw;
+}
+
+.fashion-magazine.is-wide .mag-badge {
+  left: 7cqw;
+  bottom: 8cqw;
+  max-width: 44cqw;
+}
+
+.fashion-magazine.is-wide footer {
+  right: 7cqw;
+  bottom: 6cqw;
+  max-width: 36cqw;
+}
+
+/* is-tall variant */
+.fashion-magazine.is-tall .mag-visual {
+  right: 7cqw;
+  top: auto;
+  bottom: 12cqh;
+  width: 50cqw;
+  height: 38cqh;
+}
+
+.fashion-magazine.is-tall .cover-copy {
+  left: 7cqw;
+  top: 11cqh;
+  max-width: 78cqw;
+}
+
+.fashion-magazine.is-tall .cover-copy h1 {
+  max-width: min(80cqw, var(--title-width, 80cqw));
+}
+
+.fashion-magazine.is-tall .cover-copy p {
+  max-width: min(68cqw, var(--subtitle-width, 68cqw));
+}
+
+.fashion-magazine.is-tall .mag-badge {
+  left: 7cqw;
+  bottom: 8cqh;
+  max-width: 56cqw;
+  font-size: 2cqw;
+}
+
+.fashion-magazine.is-tall footer {
+  right: 7cqw;
+  bottom: 5cqh;
+  max-width: 50cqw;
+  font-size: 2cqw;
+}

@@ -1,0 +1,213 @@
+/*
+ * Cyber Review (赛博霓虹) template
+ */
+
+.cyber-review {
+  background:
+    radial-gradient(circle at 78% 28%, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 64%), transparent 27%),
+    radial-gradient(circle at 18% 85%, color-mix(in srgb, var(--theme-accent-2, #6366F1), transparent 68%), transparent 31%),
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-bg, #0F172A), #000 10%), #02050c);
+}
+
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 88%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 88%) 1px, transparent 1px);
+  background-size: 5cqw 5cqw;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 10px, rgba(255, 255, 255, 0.045) 11px);
+  opacity: 0.7;
+}
+
+.hud-corner {
+  position: absolute;
+  width: 9cqw;
+  height: 9cqw;
+  border-color: var(--theme-accent, #7C3AED);
+  opacity: 0.72;
+}
+
+.hud-corner.top-left { top: 4cqw; left: 4cqw; border-top: 0.5cqw solid; border-left: 0.5cqw solid; }
+.hud-corner.top-right { top: 4cqw; right: 4cqw; border-top: 0.5cqw solid; border-right: 0.5cqw solid; }
+.hud-corner.bottom-left { bottom: 4cqw; left: 4cqw; border-bottom: 0.5cqw solid; border-left: 0.5cqw solid; }
+.hud-corner.bottom-right { bottom: 4cqw; right: 4cqw; border-bottom: 0.5cqw solid; border-right: 0.5cqw solid; }
+
+.cyber-orbit {
+  position: absolute;
+  right: -12cqw;
+  top: 10cqw;
+  width: 42cqw;
+  height: 42cqw;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 55%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 4cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 80%);
+}
+
+.density-bars {
+  position: absolute;
+  right: 6cqw;
+  bottom: 6cqw;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.8cqw;
+  height: 12cqw;
+}
+
+.density-bars span {
+  width: 0.8cqw;
+  background: color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 25%);
+}
+
+.density-low .density-bars span:nth-child(n+5),
+.density-low .cyber-orbit {
+  display: none;
+}
+
+.density-high .scanline,
+.density-high .cyber-grid {
+  opacity: 1;
+}
+
+/* Wide (default) layout */
+.cyber-review .cover-copy {
+  left: 7cqw;
+  top: 20cqh;
+  max-width: 56cqw;
+}
+
+.cyber-review .cover-copy h1 {
+  max-width: min(54cqw, var(--title-width));
+  color: #f8fbff;
+  text-shadow: 0 0 2.4cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 56%);
+}
+
+.cyber-review .cover-copy p {
+  max-width: min(45cqw, var(--subtitle-width));
+}
+
+.cyber-review .visual-bay {
+  right: 7cqw;
+  top: 23cqh;
+  width: 28cqw;
+  height: 28cqw;
+}
+
+.cyber-review footer {
+  left: 7cqw;
+  bottom: 7cqw;
+  font-size: 1.45cqw;
+}
+
+/* Tall variant */
+.cyber-review.is-tall .cover-copy {
+  top: 12cqh;
+  left: 7cqw;
+}
+
+.cyber-review.is-tall .visual-bay {
+  right: 3cqw;
+  bottom: 9cqh;
+  top: auto;
+  width: 58cqw;
+  height: 58cqw;
+}
+
+.cyber-review.is-tall .cyber-orbit {
+  right: -22cqw;
+  top: auto;
+  bottom: 4cqh;
+  width: 82cqw;
+  height: 82cqw;
+}
+
+.cyber-review.is-tall .density-bars {
+  right: 7cqw;
+  bottom: 15cqh;
+  width: 14cqw;
+  height: 18cqw;
+}
+
+.cyber-review.is-tall footer {
+  left: 7cqw;
+  bottom: 5cqh;
+  font-size: 2.5cqw;
+}
+
+/* Wide variant overrides from template-layouts */
+.cyber-review.is-wide .visual-bay {
+  left: 9cqw;
+  right: auto;
+  top: 10cqh;
+  bottom: auto;
+  width: 24cqw;
+  height: 24cqw;
+}
+
+.cyber-review.is-wide .label-chip {
+  position: absolute;
+  right: 9cqw;
+  top: 9cqh;
+  margin: 0;
+}
+
+.cyber-review.is-wide .cover-copy h1 {
+  position: absolute;
+  left: 9cqw;
+  top: 36cqh;
+  max-width: min(64cqw, var(--title-width));
+}
+
+.cyber-review.is-wide .cover-copy p {
+  position: absolute;
+  left: 9cqw;
+  top: 58cqh;
+  max-width: min(58cqw, var(--subtitle-width));
+}
+
+.cyber-review.is-wide footer {
+  left: auto;
+  right: 8cqw;
+  bottom: 7cqh;
+  text-align: right;
+}
+
+.cyber-review.is-tall .label-chip {
+  position: absolute;
+  right: 13cqw;
+  top: 9cqh;
+  margin: 0;
+  max-width: 24cqw;
+  font-size: 1.85cqw;
+}
+
+.cyber-review.is-tall .cover-copy h1 {
+  position: absolute;
+  left: 14cqw;
+  top: 31cqh;
+  max-width: min(72cqw, var(--title-width));
+  font-size: calc(9.4cqw * var(--title-scale));
+  line-height: var(--title-line-height);
+}
+
+.cyber-review.is-tall .cover-copy p {
+  position: absolute;
+  left: 15cqw;
+  top: 48cqh;
+  max-width: min(70cqw, var(--subtitle-width));
+  font-size: calc(3.05cqw * var(--subtitle-scale));
+}
+
+.cyber-review.is-tall footer {
+  left: auto;
+  right: 13cqw;
+  bottom: 14cqh;
+  max-width: 28cqw;
+  text-align: right;
+}

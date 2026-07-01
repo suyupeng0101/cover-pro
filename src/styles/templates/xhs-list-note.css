@@ -1,0 +1,160 @@
+/*
+ * XHS List Note template
+ */
+
+.xhs-list-note {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 82%), transparent),
+    var(--theme-bg, #0F172A);
+}
+
+.xhs-list-card {
+  position: absolute;
+  inset: 6cqw;
+  border-radius: 1.6cqw;
+  padding: 4cqw;
+  background: color-mix(in srgb, var(--theme-bg, #0F172A), #fff 10%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.xhs-list-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.25cqw;
+  letter-spacing: 0.04em;
+}
+
+.xhs-list-top span {
+  color: var(--theme-accent, #7C3AED);
+  font-weight: 900;
+}
+
+.xhs-list-note .cover-copy {
+  left: 4cqw;
+  top: 15cqh;
+  max-width: 72cqw;
+}
+
+.xhs-list-note .cover-copy h1 {
+  max-width: min(68cqw, var(--title-width));
+}
+
+.xhs-points {
+  position: absolute;
+  left: 4cqw;
+  right: 4cqw;
+  bottom: 10cqw;
+  display: grid;
+  gap: 1cqw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.xhs-points li {
+  min-height: 4cqw;
+  display: flex;
+  align-items: center;
+  gap: 1cqw;
+  padding: 0.9cqw 1.3cqw;
+  border-radius: 0.9cqw;
+  color: var(--theme-fg, #F1F5F9);
+  background: rgba(255, 255, 255, 0.09);
+  font-size: 1.65cqw;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.xhs-points li::before {
+  content: counter(list-item);
+  width: 2.6cqw;
+  height: 2.6cqw;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--theme-accent, #7C3AED);
+  color: #02040a;
+  font-size: 1.4cqw;
+  font-weight: 900;
+}
+
+.xhs-list-badge {
+  position: absolute;
+  left: 4cqw;
+  bottom: 4cqw;
+  max-width: 50cqw;
+  color: var(--theme-accent, #7C3AED);
+  font-size: 1.3cqw;
+  font-weight: 900;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.xhs-list-note footer {
+  position: absolute;
+  right: 8cqw;
+  bottom: 5cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-size: 1.35cqw;
+}
+
+/* Tall variant */
+.xhs-list-note.is-tall .cover-copy {
+  top: 13cqh;
+}
+
+.xhs-list-note.is-tall .xhs-points {
+  bottom: 12cqh;
+  gap: 1.6cqw;
+}
+
+.xhs-list-note.is-tall .xhs-points li {
+  min-height: 6cqw;
+  padding: 1.2cqw 1.6cqw;
+  font-size: 2.45cqw;
+}
+
+.xhs-list-note.is-tall .xhs-points li::before {
+  width: 4.2cqw;
+  height: 4.2cqw;
+  font-size: 2.2cqw;
+}
+
+.xhs-list-note.is-tall .xhs-list-badge {
+  bottom: 7cqh;
+  font-size: 2.2cqw;
+}
+
+.xhs-list-note.is-tall footer {
+  bottom: 4cqh;
+  font-size: 2.1cqw;
+}
+
+/* Wide variant overrides from template-layouts */
+.xhs-list-note.is-wide .cover-copy {
+  left: 4.2cqw;
+  top: 13cqh;
+  max-width: 74cqw;
+}
+
+.xhs-list-note.is-wide .xhs-points {
+  left: 4.2cqw;
+  right: 4.2cqw;
+  bottom: 10.5cqw;
+}
+
+.xhs-list-note.is-wide .xhs-list-badge {
+  left: 4.2cqw;
+  bottom: 4cqw;
+  max-width: 56cqw;
+}
+
+.xhs-list-note.is-wide footer {
+  right: 8cqw;
+  bottom: 5.2cqw;
+  max-width: 35cqw;
+}

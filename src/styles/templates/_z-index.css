@@ -1,0 +1,8 @@
+:root {
+  --z-bg: 1;
+  --z-decoration: 2;
+  --z-visual: 4;
+  --z-content: 6;
+  --z-overlay: 8;
+  --z-ui: 12;
+}

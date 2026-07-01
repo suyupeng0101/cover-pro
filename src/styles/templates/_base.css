@@ -1,0 +1,196 @@
+/*
+ * Template base styles shared across all templates.
+ * Provides common layout, z-index layering, and shared element styling.
+ */
+
+.cyber-review .cover-copy,
+.neon-terminal .cover-copy,
+.ai-radar .cover-copy {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  max-width: none;
+}
+
+.visual-bay,
+.terminal-art,
+.launch-visual {
+  position: absolute;
+  z-index: var(--z-visual, 4);
+}
+
+.cyber-review footer,
+.neon-terminal .command-line,
+.ai-radar footer,
+.launch-footer,
+.launch-badge {
+  position: absolute;
+  z-index: var(--z-ui, 12);
+}
+
+.cyber-review .label-chip,
+.neon-terminal .label-chip,
+.ai-radar .label-chip,
+.glass-report .label-chip,
+.launch-topline,
+.glass-sidebar {
+  z-index: var(--z-ui, 12);
+}
+
+.neon-terminal .command-line .text-el-badge,
+.neon-terminal .command-line .text-el-author,
+.launch-footer .text-el-author,
+.glass-sidebar .text-el-author,
+.glass-sidebar .text-el-badge {
+  display: inline-block;
+  visibility: visible;
+}
+
+.cyber-review .cover-copy p,
+.neon-terminal .cover-copy p,
+.ai-radar .cover-copy p,
+.glass-report .cover-copy p {
+  margin: 0;
+}
+
+/* Template v3 shared element styling */
+.template .label-chip {
+  border-radius: 0.6cqw;
+  border-color: color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 35%);
+  background: color-mix(in srgb, var(--theme-bg, #0F172A), var(--theme-accent, #7C3AED) 14%);
+  color: var(--theme-accent, #7C3AED);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.35cqw;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.is-tall .template .label-chip {
+  font-size: 1.9cqw;
+  padding: 0.9cqw 1.8cqw;
+}
+
+.template footer,
+.template .text-el-author {
+  color: color-mix(in srgb, var(--theme-fg, #F1F5F9), var(--theme-muted, #94A3B8) 58%);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  letter-spacing: 0;
+}
+
+.template-badge {
+  position: absolute;
+  z-index: var(--z-ui, 12);
+  right: 8cqw;
+  bottom: 8cqh;
+  max-width: 30cqw;
+  padding: 0.8cqw 1.1cqw;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 25%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--theme-bg, #0F172A), var(--theme-accent, #7C3AED) 18%);
+  color: var(--text-badge-color, currentColor);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.45cqw;
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.is-tall .template-badge {
+  font-size: 2.05cqw;
+}
+
+/* Shared visual elements */
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 40%));
+}
+
+.mock-product {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.mock-product.is-empty::before {
+  content: "";
+  width: 18%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 45%);
+  box-shadow: 0 0 4cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 62%);
+}
+
+.mock-product-core {
+  width: 52%;
+  min-width: 0;
+  padding: 0.6cqw;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 25%);
+  background: color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 82%);
+  color: var(--theme-accent, #7C3AED);
+  border-radius: 22%;
+  font-size: clamp(1.4cqw, 4.4cqw, 5.8cqw);
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  white-space: pre-line;
+  word-break: break-word;
+  box-shadow: 0 0 6cqw color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 65%);
+}
+
+.is-tall .mock-product-core {
+  font-size: clamp(2.2cqw, 6.8cqw, 8.4cqw);
+}
+
+.mock-product-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 58%);
+}
+
+.ring-one {
+  inset: 18%;
+}
+
+.ring-two {
+  inset: 5%;
+  border-style: dashed;
+}
+
+/* Shared background decorations */
+.cyber-grid,
+.terminal-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 88%) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 88%) 1px, transparent 1px);
+  background-size: 5cqw 5cqw;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent 10px, rgba(255, 255, 255, 0.045) 11px);
+  opacity: 0.7;
+}
+
+.density-low .density-bars span:nth-child(n+5),
+.density-low .cyber-orbit,
+.density-low .terminal-window {
+  display: none;
+}
+
+.density-high .scanline,
+.density-high .cyber-grid,
+.density-high .terminal-bg {
+  opacity: 1;
+}

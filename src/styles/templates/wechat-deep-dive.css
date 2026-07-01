@@ -1,0 +1,103 @@
+/*
+ * WeChat Deep Dive template
+ */
+
+.wechat-deep-dive {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--theme-accent, #7C3AED), transparent 90%) 0 1px, transparent 1px),
+    linear-gradient(135deg, color-mix(in srgb, var(--theme-bg, #0F172A), #fff 5%), var(--theme-bg, #0F172A));
+  background-size: 4cqw 100%, auto;
+}
+
+.wechat-rule {
+  position: absolute;
+  left: 6cqw;
+  top: 7cqw;
+  bottom: 7cqw;
+  width: 0.45cqw;
+  background: var(--theme-accent, #7C3AED);
+}
+
+.wechat-meta {
+  position: absolute;
+  left: 9cqw;
+  right: 7cqw;
+  top: 7cqw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 1.2cqw;
+  letter-spacing: 0.04em;
+}
+
+.wechat-meta span {
+  color: var(--theme-accent, #7C3AED);
+  font-weight: 900;
+}
+
+.wechat-meta strong,
+.wechat-meta span {
+  max-width: 38cqw;
+  overflow-wrap: anywhere;
+}
+
+.wechat-deep-dive .cover-copy {
+  left: 9cqw;
+  top: 23cqh;
+  max-width: 72cqw;
+}
+
+.wechat-deep-dive .cover-copy h1 {
+  max-width: min(68cqw, var(--title-width));
+  color: var(--theme-fg, #F1F5F9);
+}
+
+.wechat-deep-dive .cover-copy p {
+  max-width: min(58cqw, var(--subtitle-width));
+}
+
+.wechat-badge,
+.wechat-deep-dive footer {
+  position: absolute;
+  z-index: var(--z-overlay);
+}
+
+.wechat-badge {
+  left: 9cqw;
+  bottom: 8cqw;
+  max-width: 44cqw;
+  color: var(--theme-accent, #7C3AED);
+  font-size: 1.3cqw;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.wechat-deep-dive footer {
+  right: 7cqw;
+  bottom: 8cqw;
+  color: var(--theme-muted, #94A3B8);
+  font-size: 1.35cqw;
+}
+
+/* Tall variant */
+.wechat-deep-dive.is-tall .cover-copy {
+  top: 12cqh;
+}
+
+.wechat-deep-dive.is-tall .wechat-meta {
+  font-size: 1.9cqw;
+}
+
+.wechat-deep-dive.is-tall .wechat-badge {
+  bottom: 8cqh;
+  max-width: 66cqw;
+  font-size: 2.2cqw;
+}
+
+.wechat-deep-dive.is-tall footer {
+  bottom: 4.5cqh;
+  font-size: 2.1cqw;
+}

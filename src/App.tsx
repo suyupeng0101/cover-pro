@@ -566,6 +566,7 @@ export function App() {
   };
 
   const reset = () => {
+    if (!window.confirm('确定要重置所有内容吗？此操作不可撤销。')) return;
     const currentTemplate = templates.find((item) => item.id === style.templateId);
     setContent(defaultContent);
     setStyle({
@@ -629,9 +630,9 @@ export function App() {
             className="ghost-button"
             type="button"
             onClick={() => setUiTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
+            aria-label={uiTheme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
           >
             {uiTheme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-            {uiTheme === 'dark' ? '' : ''}
           </button>
           <button className="ghost-button" type="button" onClick={() => patchStyle({ showSafeArea: !style.showSafeArea })}>
             {style.showSafeArea ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -683,7 +684,7 @@ export function App() {
           >
             <label className="field">
               <span>标签</span>
-              <textarea value={content.label} rows={2} onChange={(event) => patchContent({ label: event.target.value })} />
+              <textarea name="label" value={content.label} rows={2} onChange={(event) => patchContent({ label: event.target.value })} />
             </label>
             <label className="field">
               <span>主标题</span>
@@ -691,22 +692,22 @@ export function App() {
             </label>
             <label className="field">
               <span>副标题</span>
-              <textarea value={content.subtitle} rows={3} onChange={(event) => patchContent({ subtitle: event.target.value })} />
+              <textarea name="subtitle" value={content.subtitle} rows={3} onChange={(event) => patchContent({ subtitle: event.target.value })} />
             </label>
             <div className="field-pair">
               <label className="field">
                 <span>图形文字</span>
-                <textarea value={content.graphicText} rows={2} onChange={(event) => patchContent({ graphicText: event.target.value })} />
+                <textarea name="graphicText" value={content.graphicText} rows={2} onChange={(event) => patchContent({ graphicText: event.target.value })} />
               </label>
             </div>
             <div className="field-pair">
               <label className="field">
                 <span>账号</span>
-                <textarea value={content.author} rows={2} onChange={(event) => patchContent({ author: event.target.value })} />
+                <textarea name="author" value={content.author} rows={2} onChange={(event) => patchContent({ author: event.target.value })} />
               </label>
               <label className="field">
                 <span>徽章</span>
-                <textarea value={content.badge} rows={2} onChange={(event) => patchContent({ badge: event.target.value })} />
+                <textarea name="badge" value={content.badge} rows={2} onChange={(event) => patchContent({ badge: event.target.value })} />
               </label>
             </div>
           </CollapsibleSection>
@@ -725,6 +726,7 @@ export function App() {
               <input
                 type="file"
                 accept="image/*"
+                aria-label="上传图片文件"
                 onChange={(event) => onImageUpload(event.target.files?.[0] ?? null)}
               />
             </label>

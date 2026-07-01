@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
-const layoutCssPath = path.resolve(rootDir, 'src/styles/template-layouts.css');
+const layoutCssPath = path.resolve(rootDir, 'src/styles/templates/_layouts.css');
 const textElements = ['label', 'title', 'subtitle', 'author', 'badge', 'graphic'] as const;
 const customLayoutStart = '/* Cover Pro saved template defaults: start */';
 const customLayoutEnd = '/* Cover Pro saved template defaults: end */';
